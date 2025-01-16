@@ -7,5 +7,5 @@ import math
 from catscript import sys
 
 if __name__ == "__main__":
-    sys.toast(str(math.sin(math.pi)))
+    sys.log(math.sin(math.pi))
 ```

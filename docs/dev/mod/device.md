@@ -24,7 +24,7 @@ None.
 from catscript import device, sys
 
 if __name__ == "__main__":
-    sys.toast(device.ip())
+    sys.log(device.ip())
 ```
 
 ## device.name()
@@ -51,7 +51,7 @@ None.
 from catscript import device, sys
 
 if __name__ == "__main__":
-    sys.toast(device.name())
+    sys.log(device.name())
 ```
 
 ## device.sn()
@@ -78,5 +78,5 @@ None.
 from catscript import device, sys
 
 if __name__ == "__main__":
-    sys.toast(device.sn())
+    sys.log(device.sn())
 ```

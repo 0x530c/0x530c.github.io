@@ -33,7 +33,7 @@ from catscript import screen, sys
 
 if __name__ == "__main__":
     (w, h) = screen.size()
-    sys.toast(f"Screen size: ({w}, {h})")
+    sys.log(f"Screen size: ({w}, {h}).")
 ```
 
 ## screen.color()
@@ -64,7 +64,7 @@ from catscript import screen, sys
 
 if __name__ == "__main__":
     color = screen.color(100, 100)
-    sys.toast(f"{The color is #06x}")
+    sys.log(f"The color is {color:#06x}.")
 ```
 
 ## screen.is_color()
@@ -106,9 +106,9 @@ if __name__ == "__main__":
         ],
         precision=0.9,
     ):
-        sys.toast("Yes")
+        sys.log("Yes.")
     else:
-        sys.toast("No")
+        sys.log("No.")
 ```
 
 ## screen.find_color()
@@ -151,9 +151,9 @@ if __name__ == "__main__":
     # Find the red color on the screen.
     (x, y) = screen.find_color(0xFF0000)[0]
     if x != -1 and y != -1:
-        sys.toast(f"Color is at ({x}, {y})")
+        sys.log(f"Color is at ({x}, {y}).")
     else:
-        sys.toast("Not found")
+        sys.log("Not found.")
 ```
 
 ```python [Example 2]
@@ -167,9 +167,9 @@ if __name__ == "__main__":
         0xFF0000, offset=[(10, -10, 0x00FF00), (20, 30, 0x0000FF)]
     )[0]
     if x != -1 and y != -1:
-        sys.toast(f"Color is at ({x}, {y})")
+        sys.log(f"Color is at ({x}, {y}).")
     else:
-        sys.toast("Not found")
+        sys.log("Not found.")
 ```
 
 ```python [Example 3]
@@ -194,9 +194,9 @@ if __name__ == "__main__":
     )
     if coordinates[0][0] != -1 and coordinates[0][1] != -1:
         for index, (x, y) in coordinates:
-            sys.toast(f"<{index}>: (${x}, ${y})")
+            sys.log(f"<{index}>: (${x}, ${y}).")
     else:
-        sys.toast("Not found")
+        sys.log("Not found.")
 ```
 :::
 
@@ -247,9 +247,9 @@ if __name__ == "__main__":
         all=False,
     )[0]
     if x != -1 and y != -1:
-        sys.toast(f"Image is at ({x}, {y})")
+        sys.log(f"Image is at ({x}, {y}).")
     else:
-        sys.toast("Not found")
+        sys.log("Not found.")
 ```
 
 ## screen.snapshot()

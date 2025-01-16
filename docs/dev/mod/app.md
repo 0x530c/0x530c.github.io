@@ -26,7 +26,7 @@ None.
 from catscript import app, sys
 
 if __name__ == "__main__":
-    sys.toast(app.front())
+    sys.log(app.front())
 ```
 
 ## app.run()

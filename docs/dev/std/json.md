@@ -9,6 +9,6 @@ from catscript import sys
 if __name__ == "__main__":
     value = {"a": 1, "b": 2}
     s = json.dumps(value)
-    sys.toast(s)
-    sys.toast(str(json.loads(s)["a"]))
+    sys.log(s)
+    sys.log(json.loads(s)["a"])
 ```

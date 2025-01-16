@@ -64,6 +64,10 @@ export default defineConfig({
               },
             ],
           },
+          {
+            text: "API Reference",
+            link: "/dev/api",
+          },
         ],
       },
     ],

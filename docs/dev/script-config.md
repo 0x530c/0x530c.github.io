@@ -41,7 +41,7 @@ config = [
 ]
 
 if __name__ == "__main__":
-    sys.toast(str(script.config()), 3000)
+    sys.log(script.config())
 ```
 
 The corresponding configuration interface is illustrated below:

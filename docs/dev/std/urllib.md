@@ -16,9 +16,9 @@ from catscript import sys
 
 if __name__ == "__main__":
     response = urlopen("http://httpbin.org/get")
-    sys.toast(str(response.status))
+    sys.log(response.status)
     data = response.read()
-    sys.toast(data)
+    sys.log(data)
 ```
 
 HTTPS:
@@ -30,9 +30,9 @@ from catscript import sys
 
 if __name__ == "__main__":
     response = urlopen("https://httpbin.org/get", context=ssl.SSLContext())
-    sys.toast(str(response.status))
+    sys.log(response.status)
     data = response.read()
-    sys.toast(data)
+    sys.log(data)
 ```
 
 ## POST Method
@@ -47,9 +47,9 @@ from catscript import sys
 if __name__ == "__main__":
     params = urllib.parse.urlencode({"name": "test"}).encode()
     response = urlopen("http://httpbin.org/post", params)
-    sys.toast(str(response.status))
+    sys.log(response.status)
     data = response.read()
-    sys.toast(data)
+    sys.log(data)
 ```
 
 HTTPS:
@@ -63,7 +63,7 @@ from catscript import sys
 if __name__ == "__main__":
     params = urllib.parse.urlencode({"name": "test"}).encode()
     response = urlopen("https://httpbin.org/post", params, context=ssl.SSLContext())
-    sys.toast(str(response.status))
+    sys.log(response.status)
     data = response.read()
-    sys.toast(data)
+    sys.log(data)
 ```

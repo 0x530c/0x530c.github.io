@@ -26,7 +26,8 @@ sys.alert(text: str) -> str
 from catscript import sys
 
 if __name__ == "__main__":
-    sys.toast(sys.alert("Test"))
+    button = sys.alert("Test message.")
+    sys.log(f"You pressed {button}.")
 ```
 
 ## sys.execute()
@@ -55,8 +56,36 @@ sys.execute(command: str) -> str
 from catscript import sys
 
 if __name__ == "__main__":
-    sys.toast(sys.execute("whoami").strip())
+    sys.log(sys.execute("whoami").strip())
 ```
+
+## sys.log()
+
+> Output any object to logs, logs can be viewed in the VS Code extension and also in "CatScript -> Settings -> Logs".
+
+```python
+sys.log(object: object) -> None
+```
+
+### Arguments
+
+| Name   | Type   | Default | Description        |
+| ------ | ------ | ------- | ------------------ |
+| object | object |         | The object to log. |
+
+### Return
+
+None
+
+### Example
+
+```python
+from catscript import sys
+
+if __name__ == "__main__":
+    sys.log(device.ip())
+```
+
 
 ## sys.paste()
 

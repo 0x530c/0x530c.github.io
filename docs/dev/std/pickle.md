@@ -16,5 +16,5 @@ if __name__ == "__main__":
         pickle.dump(data, f)
 
     with open("/tmp/data.pickle", "rb") as f:
-        sys.toast(pickle.load(f)["b"])
+        sys.log(pickle.load(f)["b"])
 ```
