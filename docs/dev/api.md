@@ -1,6 +1,6 @@
 # API Reference
 
-We provide some HTTP APIs to remotely control the behavior of CatScript.
+We provide some HTTP APIs to remotely control CatScript.
 
 ::: tip
 The base URL for these APIs is http://deviceIP:5000.

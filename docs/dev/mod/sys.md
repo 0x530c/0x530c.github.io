@@ -86,6 +86,38 @@ if __name__ == "__main__":
     sys.log(device.ip())
 ```
 
+## sys.open_url()
+
+> Open the resource at the specified URL.
+
+::: tip
+You can obtain a list of supported settings URLs [here](https://github.com/FifiTheBulldog/ios-settings-urls/blob/master/settings-urls.md).
+:::
+
+```python
+sys.open_url(url: str) -> None
+```
+
+### Arguments
+
+| Name | Type | Default | Description      |
+| ---- | ---- | ------- | ---------------- |
+| url  | str  |         | The URL to open. |
+
+### Return
+
+None
+
+### Example
+
+```python
+from catscript import sys
+
+if __name__ == "__main__":
+    sys.open_url("https://catscript.app")
+    sys.open_url("sms://12345")
+    sys.open_url("prefs:root=WIFI")
+```
 
 ## sys.paste()
 
@@ -117,6 +149,38 @@ from catscript import device, sys
 if __name__ == "__main__":
   sys.paste(device.ip())
 ```
+
+## sys.play_sound()
+
+> Plays a system sound.
+
+::: tip
+You can obtain a list of system sound ids [here](https://github.com/TUNER88/iOSSystemSoundsLibrary).
+:::
+
+```python
+sys.play_sound(id: int) -> None
+```
+
+### Arguments
+
+| Name | Type | Default | Description             |
+| ---- | ---- | ------- | ----------------------- |
+| id   | int  |         | The id of system sound. |
+
+### Return
+
+None
+
+### Example
+
+```python
+from catscript import sys
+
+if __name__ == "__main__":
+    sys.play_sound(1005)
+```
+
 
 ## sys.toast()
 
